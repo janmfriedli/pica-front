@@ -49,7 +49,7 @@ if form.form_submit_button("Generate Image"):
         name = name
 
     data = {"alpha": alpha, "beta": beta, "color": color, "name":name}
-    url = f"http://127.0.0.1:8000/super?alpha={alpha}&beta={beta}&color={color}&name={name}&noise_dim=100&num_examples=1"
+    url = f"https://pica2-hllvgwp3wa-ew.a.run.app/super?alpha={alpha}&beta={beta}&color={color}&name={name}&noise_dim=100&num_examples=1"
     #right.write("Heres your generated image:")
 
     response = requests.post(url)
