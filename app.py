@@ -30,7 +30,7 @@ color = form.multiselect(
 
 image1 = form.multiselect(
         'Select your Categories',
-        ['apple', 'mountain', 'cloud', 'butterfly', 'house', 'door'],max_selections = 2 )
+        ['apple', 'mountain', 'cloud', 'butterfly', 'house', 'door', 'smiley'],max_selections = 2 )
 
 name = form.text_input('What is your name?')
 
@@ -48,7 +48,7 @@ if form.form_submit_button("Generate Image"):
         name = name
 
     data = {"alpha": alpha, "beta": beta, "color": color, "name":name}
-    url = f"http://0.0.0.0:8000/super?alpha={alpha}&beta={beta}&color={color}&name={name}&noise_dim=100&num_examples=1"
+    url = f"https://pica2-hllvgwp3wa-ew.a.run.app/super?alpha={alpha}&beta={beta}&color={color}&name={name}&noise_dim=100&num_examples=1"
     #right.write("Heres your generated image:")
     #https://pica2-hllvgwp3wa-ew.a.run.app
 
