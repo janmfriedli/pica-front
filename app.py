@@ -35,7 +35,6 @@ image1 = form.multiselect(
 name = form.text_input('What is your name?')
 
 
-
 #query = {"color": , "alpha": , "beta": }
 right.write("Here is your generated image:")
 if form.form_submit_button("Generate Image"):
@@ -49,8 +48,9 @@ if form.form_submit_button("Generate Image"):
         name = name
 
     data = {"alpha": alpha, "beta": beta, "color": color, "name":name}
-    url = f"https://pica2-hllvgwp3wa-ew.a.run.app/super?alpha={alpha}&beta={beta}&color={color}&name={name}&noise_dim=100&num_examples=1"
+    url = f"http://0.0.0.0:8000/super?alpha={alpha}&beta={beta}&color={color}&name={name}&noise_dim=100&num_examples=1"
     #right.write("Heres your generated image:")
+    #https://pica2-hllvgwp3wa-ew.a.run.app
 
     response = requests.post(url)
 
